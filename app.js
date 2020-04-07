@@ -1,1 +1,3 @@
-alert('hello');
+var arr=['rock, papper, scissors'];
+console.log('arr');
+
