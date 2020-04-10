@@ -1,12 +1,15 @@
 body{
     background-color: black;
+    text-align: center;
+}
+#input{
+    padding-top:12px;
 }
 #heading{
     font-size:20px;
     color:white;
     margin-top: 12px;
     text-align:center;
-
 }
 #bodyContainer{ 
     border-color: red;
@@ -21,10 +24,19 @@ body{
     border-radius:10px;
     background-color:pink;
 }
-#buttonContainer{
+#buttonOne{
     margin-top:15px;;
     text-align: center;
 }
+
 #textContainer{
     float: left;
+}
+.span{
+    flex: 80%;
+    font-size:38px;
+    flex: 50%;
+    color:white;
+    padding: 10px;
+      
 }
