@@ -1,8 +1,13 @@
 body{
     text-align: center;
 }
-#input{
+.input{
     padding-top:12px;
+    width:25em;
+    text-align:center;
+    padding-bottom:12px;
+    border-radius:5px;
+    outline:none;
 }
 #heading{
     font-size:20px;
@@ -13,9 +18,10 @@ body{
 #bodyContainer{ 
     border-color: grey;
     border-style:solid;
-    border-width:50px;
-    margin-top: 15%;
-    
+    border-width:30px;
+    margin-top: 5%;
+    border-right-style: dotted;
+    border-left-style: dotted;    
 }
 button{
     width:15em;
@@ -23,6 +29,7 @@ button{
     border-radius:10px;
     background-color:pink;
     margin-top:10px;
+    outline: none;
 }
 .span{
     flex: 80%;
@@ -31,4 +38,10 @@ button{
     color:rgb(245, 24, 215);
     padding: 10px;
       
+}
+#players{
+    margin-top:35px;
+}
+.playerOne{
+    margin-right: 10em;
 }
