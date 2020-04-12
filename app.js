@@ -10,3 +10,18 @@ document.getElementById('scissors').addEventListener('click', () =>{
 document.getElementById('buttonOne').addEventListener('click', () =>{
     console.log('button clicked');
 });
+
+function PlayerOneDisplay(){
+    console.log('rock');
+}
+PlayerOneDisplay();
+
+function PlayerTwoDisplay(){
+console.log('paper');
+}
+PlayerTwoDisplay();
+
+function playButton(){
+    console.log('play btn function working');
+}
+playButton();
