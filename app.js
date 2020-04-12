@@ -1,12 +1,16 @@
 let submitBtn = document.getElementById('button');
-let InputValue = document.getElementById('input');
+let inputValue = document.getElementById('input');
+let text;
 
 document.getElementById('button').addEventListener('click',() => {
 console.log('clicked');
+displayInputValue()
 });
-function displayInputValue(){
-    let inputValue = document.getElementById('input');
-    return document.getElementById('playerOne').innerHTML =inputValue;
 
+function displayInputValue(){
+    let text=inputValue.nodeValue;
+    console.log(text);
+   let player=document.getElementsByClassName('playerOne');
+   
 
 }
