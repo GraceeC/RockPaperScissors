@@ -12,8 +12,8 @@ document.getElementById('paper').addEventListener('click', () => {
 document.getElementById('scissors').addEventListener('click', () => {
     console.log('scissors clicked');
 });
-document.getElementById('play').addEventListener('click', () => {
-    console.log('button clicked');
+document.getElementById('reset').addEventListener('click', () => {
+    console.log('reset button clicked');
 });
 
 
