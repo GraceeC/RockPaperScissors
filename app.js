@@ -41,5 +41,5 @@ function computersChoice() {
 
 
 function playButton() {
-    console.log('play btn function working');
+    
 }
