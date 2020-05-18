@@ -2,44 +2,31 @@ const rockItem =document.getElementById('rock');
 const paperItem = document.getElementById('paper');
 const scissorsItem = document.getElementById('scissors');
 const resetPlay = document.getElementById('reset');
+const scoreKeeper = document.getElementById('score');
+const playersChoice = document.getElementById('player-one');
+const computersChoice = document.getElementById('player-two');
 
-window.onload = function () {
-    playersChoice();
-    computersChoice();
-    playButton();
-}
+// window.onload = function () {
+//     playersChoice();
+//     computersChoice();
+//     playButton();
+// }
 
-document.getElementById('rock').addEventListener('click', () => {
+rockItem.addEventListener('click', () => {
     console.log('rock clicked');
 });
 
-document.getElementById('paper').addEventListener('click', () => {
+paperItem.addEventListener('click', () => {
     console.log('paper clicked');
 });
 
-document.getElementById('scissors').addEventListener('click', () => {
+scissorsItem.addEventListener('click', () => {
     console.log('scissors clicked');
 });
 
 
-document.getElementById('reset').addEventListener('click', () => {
+resetPlay.addEventListener('click', () => {
     console.log('reset button clicked');
 });
 
 
-
-function playersChoice() {
-    let playerOneItem = document.getElementById('value-option');
-    console.log(playerOneItem);
-    playerOneItem
-}
-
-
-function computersChoice() {
-
-}
-
-
-function playButton() {
-    
-}
