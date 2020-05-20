@@ -1,7 +1,2 @@
-//player one choose option rock, paper or scissors
-//option will display in player one
-//player two will display a random option of rock paper or scissors
-//player one & player two will display plays
-//player two needs to have several random options
-// windows needs to show winner
-// need to be able to replay 
+//click option
+//console.log btn clicked

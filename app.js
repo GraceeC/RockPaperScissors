@@ -1,32 +1,27 @@
-const rockItem =document.getElementById('rock');
-const paperItem = document.getElementById('paper');
-const scissorsItem = document.getElementById('scissors');
+//global variable to grab event listener parent element
+let playersDivElement = document.querySelector('#players-choice');
+console.log(playersDivElement);
+playersDivElement.addEventListener('click', itemSelected, false );
+let computerChoice;
+let userChoice;
+
+let results =gameLogic();
+
 const resetPlay = document.getElementById('reset');
 const scoreKeeper = document.getElementById('score');
-const playersChoice = document.getElementById('player-one');
-const computersChoice = document.getElementById('player-two');
 
-// window.onload = function () {
-//     playersChoice();
-//     computersChoice();
-//     playButton();
-// }
+//function using e.target to to give each btn e.target value
+function itemSelected(e){ 
+    if (e.target !== e.currentTarget){
+        let clickedItem = e.target.id;
+        console.log('button' + ' ' + clickedItem + ' ' + 'clicked' );
+    }
+    e.stopPropagation();
+}
 
-rockItem.addEventListener('click', () => {
-    console.log('rock clicked');
-});
-
-paperItem.addEventListener('click', () => {
-    console.log('paper clicked');
-});
-
-scissorsItem.addEventListener('click', () => {
-    console.log('scissors clicked');
-});
-
-
-resetPlay.addEventListener('click', () => {
-    console.log('reset button clicked');
-});
-
-
+function gameLogic(){
+if(computerChoice === userChoice){
+    return results = ('Tie!');
+}
+gameLogic();
+}
