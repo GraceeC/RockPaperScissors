@@ -13,8 +13,7 @@ playersDivElement.addEventListener("click", userChoseSelectedItem, false);
 
 window.onload = function (e) {
   gameLogic();
-  computerSelectedItem();
-  userChoseSelectedItem(event);
+
 };
 
 //function using e.target to to give each btn e.target value
