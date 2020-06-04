@@ -1,56 +1,57 @@
-//global variable to grab event listener parent element
-let randomGuess = Math.floor(Math.random() * 3);
-console.log(randomGuess);
+let randomGuess = Math.round(Math.random() * (3));
 let playersDivElement = document.querySelector('#players-choice');
-let computerChoice = document.getElementById('computer-selection');
-let userChoice = document.getElementById("user-selection");
-let result = gameLogic();
 
-let userSelection;
+let userChoice = document.getElementById('user-selection');
+let computerHeaderTag = document.getElementById('computer-selection');
+
+
 let computerSelection;
+let userSelection;
 
-playersDivElement.addEventListener("click", userChoseSelectedItem, false);
 
-window.onload = function (e) {
-  gameLogic();
-  computerSelectedItem();
-  userChoseSelectedItem(event);
+let result;
+
+playersDivElement.addEventListener('click', userChoseSelectedItem, false);
+
+window.onload =function() {
+    gameLogic(false);
 };
 
 //function using e.target to to give each btn e.target value
-let userSelectedItem = document.getElementById('user-selection');
 function userChoseSelectedItem(e) {
-  if (userSelection !== e.currentTarget) {
+    userSelection = e.target;
+    computerHeaderTag = ['rock', 'paper', 'scissors'];
+  console.log(e.target);
+  if (userChoice !== e.currentTarget) {
     choosenItem = e.target.id;
-    userSelectedItem.innerHTML = choosenItem;
+    userChoice.innerHTML = choosenItem;
   }
   e.stopPropagation();
 }
 
 function computerSelectedItem() {
   if (randomGuess === 1) {
-    return (result = 'rock');
+    return computerSelection = 'rock'
   } else if (randomGuess === 2) {
-    return (result = 'paper');
-  } else randomGuess === 3;
-  return (result = 'scissors');
+    return computerSelection = 'paper'
+  } else (randomGuess === 3);
+  return computerSelection = 'scissors'
 }
-console.log(result);
-computerChoice.innerHTML = computerSelection;
+computerHeaderTag.innerHTML =computerSelection;
 
-function gameLogic() {
-  if (userChoice === computerChoice) {
-    return (result = "You both ties");
-  } else if (userChoice === "rock" && computerChoice === "paper") {
-    return (result = "You lost, Try again!");
-  } else if (userChoice === "rock" && computerChoice === "scissors") {
-    return (result = "Congratgulations you won!");
-  } else if (userChoice === "scissors" && computerChoice === "rock") {
-    return (result = "You lost, Try again!");
-  } else if (userChoice === "scissors" && computerChoice === "paper") {
-    return (result = "Congratgulations you won!");
-  } else if (userChoice === "paper" && computerChoice === "rock") {
-    return (result = "Congratgulations you won!");
-  } else if (userChoice === "paper" && computerChoice === "scissors")
-    return (result = "You lost, try again");
+function gameLogic(e) {
+  if (computerSelection === userSelection) {
+    return result='Its a tie'
+  } else if (computerSelection === 'rock' && userSelection === paper') {
+    return result = 'You lost, Try again!';
+  } else if (computerSelection === 'rock' && userSelection === 'scissors') {
+    return result = 'Congratgulations you won!';
+  } else if (computerSelection === 'scissors' && userSelection === 'rock') {
+    return result = 'You lost, Try again!';
+  } else if (computerSelection === 'scissors' && userSelection === 'paper') {
+    return result = 'Congratgulations you won!';
+  } else if (computerSelection === "paper" && userSelection === "rock") {
+    return result = 'Congratgulations you won!';
+  } else if (computerSelection === 'paper' && userSelection === 'scissors'){ 
+    return result = 'You lost, try again';
 }
