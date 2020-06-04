@@ -50,7 +50,7 @@ function gameLogic(e) {
     return result = 'You lost, Try again!';
   } else if (computerSelection === 'scissors' && userSelection === 'paper') {
     return result = 'Congratgulations you won!';
-  } else if (computerSelection === "paper" && userSelection === "rock") {
+  } else if (computerSelection === 'paper' && userSelection === 'rock') {
     return result = 'Congratgulations you won!';
   } else if (computerSelection === 'paper' && userSelection === 'scissors'){ 
     return result = 'You lost, try again';
