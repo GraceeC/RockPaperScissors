@@ -1,7 +1,7 @@
 let randomGuess = Math.round(Math.random() * (3));
 let playersDivElement = document.querySelector('#players-choice');
 
-let userChoice = document.getElementById('user-selection');
+let userChoiceTag = document.getElementById('user-selection');
 let computerHeaderTag = document.getElementById('computer-selection');
 
 
@@ -20,14 +20,22 @@ window.onload =function() {
 //function using e.target to to give each btn e.target value
 function userChoseSelectedItem(e) {
     userSelection = e.target;
-    computerHeaderTag = ['rock', 'paper', 'scissors'];
-  console.log(e.target);
-  if (userChoice !== e.currentTarget) {
+    computerSelection = ['rock', 'paper', 'scissors'];
+    
+  if(computerSelection !== computerSelection){
+      itemSelected = computerSelection;
+      computerHeaderTag.innerHTML = itemSelected;
+  } console.log(computerHeaderTag)
+  if (userChoiceTag !== e.currentTarget) {
     choosenItem = e.target.id;
-    userChoice.innerHTML = choosenItem;
+    userChoiceTag.innerHTML = choosenItem;
   }
   e.stopPropagation();
 }
+
+
+
+console.log(computerSelection)
 
 function computerSelectedItem() {
   if (randomGuess === 1) {
@@ -37,21 +45,27 @@ function computerSelectedItem() {
   } else (randomGuess === 3);
   return computerSelection = 'scissors'
 }
-computerHeaderTag.innerHTML =computerSelection;
+
+
+computerHeaderTag.innerHTML = computerSelection;
+
+
+
 
 function gameLogic(e) {
-  if (computerSelection === userSelection) {
+  if (computerHeaderTag === userSelection) {
     return result='Its a tie'
-  } else if (computerSelection === 'rock' && userSelection === paper') {
+  } else if (computerHeaderTag === 'rock' && userSelection === 'paper') {
     return result = 'You lost, Try again!';
-  } else if (computerSelection === 'rock' && userSelection === 'scissors') {
+  } else if (computerHeaderTag === 'rock' && userSelection === 'scissors') {
     return result = 'Congratgulations you won!';
-  } else if (computerSelection === 'scissors' && userSelection === 'rock') {
+  } else if (computerHeaderTag === 'scissors' && userSelection === 'rock') {
     return result = 'You lost, Try again!';
-  } else if (computerSelection === 'scissors' && userSelection === 'paper') {
+  } else if (computerHeaderTag === 'scissors' && userSelection === 'paper') {
     return result = 'Congratgulations you won!';
-  } else if (computerSelection === 'paper' && userSelection === 'rock') {
+  } else if (computerHeaderTag === 'paper' && userSelection === 'rock') {
     return result = 'Congratgulations you won!';
-  } else if (computerSelection === 'paper' && userSelection === 'scissors'){ 
+  } else if (computerHeaderTag === 'paper' && userSelection === 'scissors'){ 
     return result = 'You lost, try again';
+}
 }
