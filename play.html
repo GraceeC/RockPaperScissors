@@ -4,31 +4,34 @@
 <head>
 
     <head>
-        <meta charset='utf-8' />
-        <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Rock Paper Scissors</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <!-- <link rel='stylesheet' href='timer.css' /> -->
-        <link href='https://fonts.googleapis.com/css?family=Playfair+Display&display=swap' rel='stylesheet' />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="app.css" />
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet" />
     </head>
 </head>
 
 <body>
-    <div id='body'>
+    <div id="body">
         <h1>Rock Paper Scissors</h1>
         <h2>Choose your play!</h2>
-        <h3 id='user-choice' class='player'>User Choice: </h3>
-        <span id='user-selection'></span>
-        <h3 id='computer-choice' class='player'> Computer Choice: </h3>
-        <span id='computer-selection'></span>
-        <h3 id='score'>Score:</h3>
-    <div id='players-choice'>
-        <button class='choice' id='rock'> Rock </button>
-        <button class='choice' id='paper'> Paper </button>
-        <button class='choice' id='scissors'> Scissors </button>
+        <h3 id="user-choice" class="player">User Selected:</h3>
+        <span id="user-selection"></span>
+        <h3 id="computer-choice" class="player">Computer Selected:</h3>
+        <span id="computer-selection"></span>
+        <h3 id="score">Score:</h3>
+        <div id="choice">
+            <img src="rock.jpg" id="rock" class="choice" />
+            <img src="paper.jpg" id="paper" class="choice" />
+            <img src="scissors.jpg" id="scissors" class="choice" />
+        </div>
     </div>
+    <div>
+        <button id="play-button">End!</button>
+        <script src="app.js"></script>
     </div>
-    <script src='app.js'></script>
 </body>
 
 </html>
