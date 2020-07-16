@@ -1,30 +1,36 @@
-let userPlay;
-let computerPlay;
+let userSelected = document.getElementById('user-selected');
+let computerSelected = document.getElementById('computer-selected');
+let playButton = document.getElementById('play-button');
+let options = document.querySelector('#choice');
 
-window.onload = function () {
-  startGame();
-  computerChoice();
+
+let userChoice;
+let computerChoice;
+// event handler for play Button on index.html page
+playButton.addEventListener("click", function () {
+  window.document.location = "./play.html";
+});
+//user choice logic
+options.addEventListener('click', userLogic, false);
+function userLogic(e) {
+  console.log('user btn clicked');
+  if (userChoice !== event.currentTarget) {
+    userChoosenItem = e.target.id;
+    userSelected.innerHTML = userChoosenItem;
+  }
+  e.stopPropagation();
 }
 
-let startGame = function () {
-  playButton = document.getElementById('play-button');
-  playButton.addEventListener('click', function () {
-    console.log(playButton, 'button clicked');
-    window.document.location = './play.html';
-  });
-}
-
-let computerChoice = function () {
+//computer choice logic
+function computerLogic() {
   let optionArray = ['rock', 'scissors', 'paper'];
   let randomGuess = optionArray[Math.floor(Math.random() * optionArray.length)];
+
   console.log(randomGuess);
+options.addEventListener('click', function(){
+  computerSelected.innerText = randomGuess;
+});
+  
+} 
+computerLogic();
 
-  let computerSelectedItem = document.getElementById('computer-selection');
-  computerSelectedItem.innerText = randomGuess
-}
-
-let userChoice = function () {
-  let userSelectedItem = document.querySelectorAll('.choice');
-
-
-}
