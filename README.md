@@ -11,7 +11,7 @@ View my Application [Click Here](https://graceec.github.io/RockPaperScissors/)
 
 <br>
 
-<img src ='' img align='left' width='400' height='200'>
+<img src ='rock-paper-scissors.jpg' img align='left' width='400' height='200'>
 
 ## Author
 * **Grace Cardenas** - *Front End Developer* 
