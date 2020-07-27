@@ -24,8 +24,7 @@ function gameLogic() {
   //computer choice logic
   function computerLogic(computer) {
     let optionArray = ["rock", "scissors", "paper"];
-    let randomGuess =
-      optionArray[Math.floor(Math.random() * optionArray.length)];
+    let randomGuess = optionArray[Math.floor(Math.random() * optionArray.length)];
     computer = randomGuess;
     computerDisplay = document.getElementById("computer-selected");
     options.addEventListener("click", function () {
