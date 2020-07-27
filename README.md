@@ -1,5 +1,5 @@
 # RockPaperScissors
-Rock Paper Scissors
+
 
 
 ## Technique
