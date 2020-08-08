@@ -2,7 +2,7 @@
 
 <br>
 A project built completly by using Vanilla JavaScipt, Css and HTML.
-View my Application [Click Here](https://graceec.github.io/RockPaperScissors/)
+View my Application [Click Here] (https://graceec.github.io/RockPaperScissors/)
 
 ## Technique
 Creating this application has helped me have a learn the fundamentals of JavaScript. Nesting functions inside one another, giving 
