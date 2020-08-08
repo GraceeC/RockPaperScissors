@@ -1,65 +1,47 @@
-function gameLogic() {
-  let userChoice;
-  let computerChoice;
-  let playButton = document.getElementById("play-button");
-  let options = document.querySelector("#choice");
+ let playButton = document.getElementById("play-button");
+ playButton.addEventListener("click", function () {
+   window.document.location = "./play.html";
+ });
 
-  // event handler for play Button on index.html page
-  playButton.addEventListener("click", function () {
-    window.document.location = "./play.html";
-  });
+ let options = document.querySelector("#choice");
+ options.addEventListener("click", function(e) {
+   let optionArray = ["rock", "scissors", "paper"];
+   const computerChoice = optionArray[Math.floor(Math.random() * optionArray.length)];
 
-  //user choice logic
-  options.addEventListener("click", userLogic, false);
+   const computerDisplay = document.getElementById("computer-selected");
+   computerDisplay.innerText = computerChoice;
 
-  function userLogic(e) {
-    userDisplay = document.getElementById("user-selected");
-    if (userChoice !== event.currentTarget) {
-      userChoice = e.target.id;
-      userDisplay.innerHTML = userChoice;
-    }
-    e.stopPropagation(userChoice);
-  }
+   const userDisplay = document.getElementById("user-selected");
+   const userChoice = e.target.id;
+   userDisplay.innerHTML = userChoice;
 
-  //computer choice logic
-  function computerLogic(computer) {
-    let optionArray = ["rock", "scissors", "paper"];
-    let randomGuess = optionArray[Math.floor(Math.random() * optionArray.length)];
-    computer = randomGuess;
-    computerDisplay = document.getElementById("computer-selected");
-    options.addEventListener("click", function () {
-      computerDisplay.innerText = computer;
-      comparison(userChoice, computer);
-    });
-  }
-  computerLogic(computerChoice);
+   comparison(userChoice, computerChoice)
 
-  function comparison(user, computer) {
-    let displayWinner = document.getElementById("winner");
-    if (user === computer) {
-      displayWinner.innerText = "You Both tied! Try again";
-    }
-    if (user == "rock" && computer == "paper") {
-      displayWinner.innerText = "Computer Won!";
-    }
-    if (user == "rock" && computer == "scissors") {
-      displayWinner.innerText = "User Won!";
-    }
-    if (user == "rock" && computer == "paper") {
-      displayWinner.innerText = "Computer Won!";
-    }
-    if (user == "paper" && computer == "scissors") {
-      displayWinner.innerText = "Computer Won!";
-    }
-    if (user == "paper" && computer == "rock") {
-      displayWinner.innerText = "User Won!";
-    }
-    if (user == "scissors" && computer == "paper") {
-      displayWinner.innerText = "User Won!";
-    }
-    if (user == "scissors" && computer == "rock") {
-      displayWinner.innerText = "Computer Won!";
-    }
-  }
-}
-gameLogic();
+   e.stopPropagation(userChoice);
+ });
+
+ function comparison(user, computer) {
+   let displayWinner = document.getElementById("winner");
+   if (user === computer) {
+     displayWinner.innerText = "You Both tied! Try again";
+     return;
+   }
+
+   const rockLosesToPaper =user == user == "rock" && computer == "paper";
+   const paperLosesToPaper = user == user == "paper" && computer == "scissors";
+   const scissorsLosesToRock = user == "scissors" && computer == "paper";
+   if (rockLosesToPaper || paperLosesToPaper || scissorsLosesToRock) {
+     displayWinner.innerText = "Computer Won!";
+     return;
+   }
+
+   const rockBeatsScissors = user == "rock" && computer == "scissors";
+   const rockBeatsPaper = user == "rock" && computer == "paper";
+   const scissorsBeatsPaper = user == "scissors" && computer == "paper";
+
+   if (rockBeatsScissors || rockBeatsScissors || scissorsBeatsPaper) {
+     displayWinner.innerText = "User Won!";
+     return;
+   }
+
+ }

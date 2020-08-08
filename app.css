@@ -28,8 +28,11 @@ img {
 /* cursor effect */
 .btn:hover {
     cursor:pointer;
+    background-color:#008CBA;
+    color: white;
 }
 /* cursor effect */
 .image-btn:hover {
     cursor:pointer;
+    background-color:grey;
 }
