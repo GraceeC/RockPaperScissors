@@ -16,4 +16,5 @@ This Rock Paper Scissors has helped expand my coding terminology. There for I am
 <img src ='game image.png' img align='left' width='400' height='200'>
 <br>
 ## Author
+<br>
 Grace Cardenas - Front End Developer
