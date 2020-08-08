@@ -29,3 +29,7 @@ img {
 .btn:hover {
     cursor:pointer;
 }
+/* cursor effect */
+.image-btn:hover {
+    cursor:pointer;
+}
