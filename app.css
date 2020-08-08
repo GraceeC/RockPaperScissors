@@ -25,3 +25,7 @@ img {
     flex: 0%;
     padding: 0px;
 }
+/* cursor effect */
+.btn:hover {
+    cursor:pointer;
+}
