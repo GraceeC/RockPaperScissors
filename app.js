@@ -36,10 +36,10 @@
    }
 
    const rockBeatsScissors = user == "rock" && computer == "scissors";
-   const rockBeatsPaper = user == "rock" && computer == "paper";
+   const paperBeatsRock = user == "rock" && computer == "paper";
    const scissorsBeatsPaper = user == "scissors" && computer == "paper";
 
-   if (rockBeatsScissors || rockBeatsScissors || scissorsBeatsPaper) {
+   if (rockBeatsScissors || paperBeatsRock || scissorsBeatsPaper) {
      displayWinner.innerText = "User Won!";
      return;
    }
