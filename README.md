@@ -6,7 +6,7 @@ View my Application - [Click Here](https://graceec.github.io/RockPaperScissors/)
 
 <br>
 
-<img src ='game image.png' img align='left' width='600' height='200'>
+<img src ='game image.png' img align='left' width='800' height='400'>
 
 <br>
 <br>
