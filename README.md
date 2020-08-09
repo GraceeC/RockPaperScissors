@@ -1,6 +1,5 @@
 # Vanilla JavaScript RockPaperScissors
 
-<br>
 A project built completly by using Vanilla JavaScipt, Css and HTML.
 <br>
 View my Application ![Click Here](https://graceec.github.io/RockPaperScissors/)
